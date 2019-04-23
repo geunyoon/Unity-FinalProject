@@ -22,7 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         transform.Translate(direction * speed * Time.deltaTime);
-        SetAmimatorMovement(direction);
+        if (direction.x != 0 || direction.y != 0)
+        {
+            SetAmimatorMovement(direction);
+        }
+        else {
+            animator.SetLayerWeight(1, 0);
+        }
     }      
                  
     private void TakeInput()
@@ -52,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetAmimatorMovement(Vector2 direction)
     {
+        animator.SetLayerWeight(1, 1);
         animator.SetFloat("xDir", direction.x);
         animator.SetFloat("yDir", direction.y);
     }
