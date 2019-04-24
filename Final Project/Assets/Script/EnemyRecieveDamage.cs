@@ -18,14 +18,6 @@ public class EnemyRecieveDamage : MonoBehaviour
         CheckDeath();
     }
 
-    private void CheckOverheal()
-    {
-        if(health > maxhealth)
-        {
-            health = maxhealth;
-        }
-    }
-
     private void CheckDeath()
     {
         if(health <= 0)
