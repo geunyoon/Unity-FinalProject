@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +7,13 @@ public class PlayerProjectile : MonoBehaviour
 {
     public float damage;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name != "Player")
         {
-            if(collision.GetComponent<EnemyRecieveDamage>() != null)
+            if(collision.GetComponent<Enemy>() != null)
             {
-                collision.GetComponent<EnemyRecieveDamage>().DealDamage(damage);
+                collision.GetComponent<Enemy>().DealDamage(damage);
             }
             Destroy(gameObject);
         }

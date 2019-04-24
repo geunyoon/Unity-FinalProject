@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingPlayer : MonoBehaviour
+public class ShootingPlayer : EnemyAttack
 {
     public GameObject projectile;
-    private GameObject player;
     public float minDamage;
     public float maxDamage; 
     public float projectileForce;
     public float cooldown;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         StartCoroutine(ShootPlayer());
-        player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
     IEnumerator ShootPlayer()
