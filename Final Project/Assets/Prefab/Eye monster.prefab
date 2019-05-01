@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8978488212308510948}
   - component: {fileID: 51443142094355206}
   - component: {fileID: 382336555}
+  - component: {fileID: 5903222056925737150}
   m_Layer: 8
   m_Name: Eye monster
   m_TagString: Enemy
@@ -160,3 +161,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5903222056925737150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239618778001735319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acacf3daf4be2d49bd7999a1814f123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
