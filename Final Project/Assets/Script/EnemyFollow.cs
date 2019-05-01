@@ -14,7 +14,7 @@ public class EnemyFollow : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) > 2)
+        if (Vector2.Distance(transform.position, target.position) > 5)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
