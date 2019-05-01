@@ -32,6 +32,14 @@ public class PlayerStats : MonoBehaviour
         SetHealthUI();
     }
 
+    private void ChechOverHeal()
+    {
+        if(health > maxhealth)
+        {
+            health = maxhealth;
+        }
+    }
+
     private void SetHealthUI()
     {
         healthSlider.value = CalculateHealthPercentage();

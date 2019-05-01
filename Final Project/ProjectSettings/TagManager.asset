@@ -17,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Blocking Layer
+  - Projectile
   - 
   - 
   - 
@@ -44,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Units
+    uniqueID: 2793321719
+    locked: 0
+  - name: Item
+    uniqueID: 2100841057
+    locked: 0
+  - name: floor
+    uniqueID: 3151788487
+    locked: 0
+  - name: Projectile
+    uniqueID: 3143303535
     locked: 0
