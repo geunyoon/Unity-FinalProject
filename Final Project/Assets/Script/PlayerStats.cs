@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
+    public GameObject youDied, restartButton;
 
     public GameObject player;
     public Text healthText;
@@ -52,11 +54,22 @@ public class PlayerStats : MonoBehaviour
         {
             health = 0;
             Destroy(player);
+            youDied.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+
         }
     }
     
     float CalculateHealthPercentage()
     {
         return health / maxhealth;
+
+    }
+
+    public void restartscene()
+    {
+        youDied.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
     }
 }
